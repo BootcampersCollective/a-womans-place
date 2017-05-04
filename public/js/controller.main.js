@@ -80,6 +80,9 @@ function mainController($http, $location, $sce) {
 
 
       main.resources = res.data.data.resources;
+      main.resources_page_banner = res.data.data.resources_page_banner;
+      main.resources_page_image = res.data.data.resources_page_image;
+
 
 
 
