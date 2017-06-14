@@ -269,27 +269,28 @@ body {
   background-color: #954A87;
 }
 
+/*commented out display and width to use Bootstrap grid*/
 .section {
   margin: 0px;
   box-sizing: border-box;
   padding: 10px 20px;
-  display: inline-block;
-  width: 100%;
+  /*display: inline-block;*/
+  /*width: 100%;*/
   vertical-align: top;
+  text-align: center;
 }
 
-.section p, .section-third p {
-    text-align: left;
-}
-
-.section-get-help {
+/*many styles here are redundant as well*/
+/*.section-get-help {
   display: block;
   width: 100%;
   text-align: center;
   padding: 10px 7%;
+}*/
+
+.section p, .section-third p {
+    text-align: left;
 }
-
-
 
 .section-third {
   box-sizing: border-box;
@@ -510,7 +511,8 @@ body {
     display: none;
   }
 
-  .section {
+  /* redundant */
+  /*.section {
     width: 100%;
-  }
+  }*/
 }

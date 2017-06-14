@@ -1,3 +1,4 @@
 lame.js
 node_modules
 sendgrid.env
+.DS_Store

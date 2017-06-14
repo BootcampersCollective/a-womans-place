@@ -48,10 +48,10 @@ function mainController($http, $location, $sce) {
 
       // Main object of CMS response
   main.awp = res.data.data;
-    // console.log(main.awp);
+    console.log(main.awp);
 
-    // the butter-cms response sends sends many description values as HTML text.
-    // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats all in it as HTML.
+    // the butter-cms response sends many description values as HTML text.
+    // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats and sends all text as HTML.
     // This is how (one way?) to make the HTML in those discriptions acceptable to display correctly in angularJS.
     // They have to be set as safe...
   main.communityResources = $sce.trustAsHtml(main.awp.community_resources[0].description);
@@ -70,10 +70,13 @@ function mainController($http, $location, $sce) {
       main.aboutImages = res.data.data.about_page_images;
 
       /////////////////////// GET HELP PAGE DATA //////////////////////////////
+      main.services = res.data.data.services;
+
+      // the following lines (76-79) have been replaced by bootstrap col-md-6
       // In order to split the 'services section' into two columns on the page
       // we need to split it evenly into two different arrays
-      main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
-      main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
+      // main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
+      // main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
 
 
       /////////////////////// RESOURCES PAGE DATA //////////////////////////////

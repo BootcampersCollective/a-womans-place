@@ -8,19 +8,23 @@
 <h3 class="home-head font">
   {{ main.awp.about_page_banner }}
 </h3>
-<div class="blue" style="border-radius: 0 0 5px 5px">
 
-<div class="section text-white text-shadow blue" style="border-radius: 0 0 0 5px">
-  <h3 class="font">{{ main.aboutSections[1].heading}}</h3>
-  <p class="myFont">
-    {{ main.aboutSections[1].body }}
-  </p>
-</div><div class="section orange" style="border-radius: 0 0 5px 0">
-  <h3 class="font">{{ main.aboutSections[2].heading }}</h3>
-  <p class="myFont">
-    {{ main.aboutSections[2].body }}
-  </p>
-</div>
+<div class="blue container-fluid" style="border-radius: 0 0 5px 5px">
+  <div class="row">
+    <div class="section text-white text-shadow blue col-md-6" style="border-radius: 0 0 0 5px">
+      <h3 class="font">{{ main.aboutSections[1].heading}}</h3>
+      <p class="myFont">
+        {{ main.aboutSections[1].body }}
+      </p>
+    </div>
+    <div class="section orange col-md-6" style="border-radius: 0 0 5px 0">
+      <h3 class="font">{{ main.aboutSections[2].heading }}</h3>
+      <p class="myFont">
+        {{ main.aboutSections[2].body }}
+      </p>
+    </div>
+  </div>
+
 </div>
 <h3 class="font text-purple">Executive Director</h3>
 <h4 class="font text-purple" style="margin-bottom:0"> {{ main.awp.executive_director[0].name }}</h4>
@@ -50,4 +54,3 @@
   <div>
     <button type="button" class="btn btn-lg btn-success center-block">Download 2016 Annual Report</button>
   </div>
-
