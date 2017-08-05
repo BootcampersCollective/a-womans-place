@@ -1,3 +1,6 @@
 lame.js
 node_modules
 sendgrid.env
+
+.idea/
+package-lock.json
