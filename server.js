@@ -1,9 +1,9 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var butter = require('./butter-cms.controller');
-var request = require('request');
-var PORT = process.env.PORT || 80;
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const butter = require('./butter-cms.controller');
+const request = require('request');
+const PORT = process.env.PORT || 8080;
+const app = express();
 
 app.use(express.static('public'));
 
@@ -11,10 +11,12 @@ app.get('/cmsdata', butter.getContent);
 
 require('./sendGrid')(app);
 
-app.listen(PORT, (err) =>{
-  if (err){
-    console.log('Server error:', err);
-  } else {
+app.listen(PORT, () => {
     console.log(`Server up and running on port: ${PORT}`);
-  }
+}).on('error', (err) => {
+    if(err.errno === 'EADDRINUSE') {
+        console.log(`port ${PORT} busy`);
+    } else {
+        console.log('Server error:', err);
+    }
 });
