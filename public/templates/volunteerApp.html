@@ -1,4 +1,5 @@
 <h1>Volunteer Application</h1>
+<!-- PERSONAL INFORMATION -->
 <form action="https://formspree.io/chuckb1789@gmail.com" method="post" ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 1">
   <h3>- Personal Information -</h3>
   <div class="inline">
@@ -61,6 +62,9 @@
   <br>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END PERSONAL INFORMATION -->
+
+<!-- EDUCATION -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 2">
   <h3>- Education -</h3>
   <div class="inline">
@@ -100,6 +104,9 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END EDUCATION -->
+
+<!-- REFERENCES -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 3">
   <h3>- References -</h3>
   <h4>
@@ -168,30 +175,49 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next" ng-click="main.saveRefs()">Next</button>
 </form>
+<!-- END REFERENCES -->
+
+<!-- WORK AND VOLUNTEER -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 4">
   <h3>- Work and Volunteer Experience -</h3>
-  <h4>Work Experience</h4>
-  <h5>Please list your work experience below</h5>
-  <textarea required class="description" ng-model="main.volData.workExp"></textarea>
-  <h4>Volunteer Experience</h4>
-  <h5>Please list your volunteer experience below</h5>
-  <textarea required class="description" ng-model="main.volData.volExp"></textarea>
+  <div class="inline">
+    <h4>Work Experience</h4>
+    <h5>Please list your work experience below</h5>
+    <textarea required class="description" ng-model="main.volData.workExp"></textarea>
+  </div>
+  <div class="inline">
+    <h4>Volunteer Experience</h4>
+    <h5>Please list your volunteer experience below</h5>
+    <textarea required class="description" ng-model="main.volData.volExp"></textarea>
+  </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END WORK AND VOLUNTEER -->
+
+<!-- MORE INFO -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 5">
   <h3>- More Info -</h3>
-  <h5>Why are you interested in volunteering at A Woman's Place?</h5>
-  <textarea required class="description" ng-model="main.volData.why"></textarea>
-  <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
-  <textarea required class="description" ng-model="main.volData.like"></textarea>
-  <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
-  <input required type="text" ng-model="main.volData.how">
+  <div class="inline">
+    <h5>Why are you interested in volunteering at A Woman's Place?</h5>
+    <textarea required class="description" ng-model="main.volData.why"></textarea>
+  </div>
+  <div class="inline">
+    <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
+    <textarea required class="description" ng-model="main.volData.like"></textarea>
+  </div>
+  <div class="inline">
+    <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
+    <input required type="text" ng-model="main.volData.how">
+  </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END MORE INFO -->
+
+<!-- SCHEDULE -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 6">
   <h3>- Schedule -</h3>
   <div class="inline">
@@ -216,6 +242,9 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END SCHEDULE -->
+
+<!-- ADDITIONAL QUESTIONS -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 7">
   <h3>- Additional Questions -</h3>
   <div>
@@ -251,6 +280,9 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Review Application</button>
 </form>
+<!-- END ADDITIONAL QUESTIONS -->
+
+<!-- REVIEW APPLICATION -->
 <div ng-if="main.formPage === 8">
   <h3>Review Application</h3>
   <div>
