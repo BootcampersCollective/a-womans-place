@@ -220,8 +220,8 @@
   <h3>- Additional Questions -</h3>
   <div>
     <h5>Have you ever been convicted of or charged with a crime?</h5>
-      <label><input type="radio" ng-model="main.volData.crime" value="Yes">&nbsp;Yes&nbsp;</label>
-      <label><input type="radio" ng-model="main.volData.crime" value="No">&nbsp;No&nbsp;</label>
+    <label><input type="radio" ng-model="main.volData.crime" value="Yes">&nbsp;Yes&nbsp;</label>
+    <label><input type="radio" ng-model="main.volData.crime" value="No">&nbsp;No&nbsp;</label>
   </div>
   <div ng-if="main.volData.crime == 'Yes'">
     <h5>If yes, please explain:</h5>
@@ -252,32 +252,32 @@
   <button type="submit" class="btn btn-success btn-next">Review Application</button>
 </form>
 <div ng-if="main.formPage === 8">
-    <h3>Review Application</h3>
-    <div>
-      <h4>Your Info</h4>
-      <div class="inline top-align">
-        <h5>Name</h5>
-        <label>{{ main.volData.first }} {{ main.volData.middle }} {{ main.volData.last }}</label>
-      </div>
-      <div class="inline top-align">
-        <h5>Address</h5>
-        <label>
-          {{ main.volData.street }}, {{ main.volData.city }}, {{ main.volData.state }} {{ main.volData.zip }}
-        </label>
-      </div>
-      <div class="inline top-align">
-        <h5>Phone</h5>
-        <label>
-          {{ main.volData.phone }}<br>
-          {{ main.volData.othPhone }}
-        </label>
-      </div>
-      <div class="inline top-align">
-        <h5>Email</h5>
-        <label>
-          {{ main.volData.email }}
-        </label>
-      </div>
+  <h3>Review Application</h3>
+  <div>
+    <h4>Your Info</h4>
+    <div class="inline top-align">
+      <h5>Name</h5>
+      <label>{{ main.volData.first }} {{ main.volData.middle }} {{ main.volData.last }}</label>
+    </div>
+    <div class="inline top-align">
+      <h5>Address</h5>
+      <label>
+        {{ main.volData.street }}, {{ main.volData.city }}, {{ main.volData.state }} {{ main.volData.zip }}
+      </label>
+    </div>
+    <div class="inline top-align">
+      <h5>Phone</h5>
+      <label>
+        {{ main.volData.phone }}<br>
+        {{ main.volData.othPhone }}
+      </label>
+    </div>
+    <div class="inline top-align">
+      <h5>Email</h5>
+      <label>
+        {{ main.volData.email }}
+      </label>
+    </div>
   </div>
   <div>
     <div class="inline">
@@ -290,30 +290,30 @@
     </div>
   </div>
   <hr>
-    <div class="top-align inline">
-      <h4>Education</h4>
-      <div class="top-align">
-        <div class="inline">
-          <h5>Highest Education</h5>
-          <label>{{ main.volData.highestEd }}</label>
-        </div>
-        <div class="inline">
-          <h5>Major</h5>
-          <label>{{ main.volData.major }}</label>
-        </div>
-        <div class="inline">
-          <h5>Date received and/or expected</h5>
-          <label>{{ main.volData.eduExpected }}</label>
-        </div>
-        <div class="inline">
-          <h5>Languages Spoken:</h5>
-          <label ng-repeat="language in main.volData.languages">
-            &nbsp;{{ language }}&nbsp;
-          </label>
-        </div>
+  <div class="top-align inline">
+    <h4>Education</h4>
+    <div class="top-align">
+      <div class="inline">
+        <h5>Highest Education</h5>
+        <label>{{ main.volData.highestEd }}</label>
+      </div>
+      <div class="inline">
+        <h5>Major</h5>
+        <label>{{ main.volData.major }}</label>
+      </div>
+      <div class="inline">
+        <h5>Date received and/or expected</h5>
+        <label>{{ main.volData.eduExpected }}</label>
+      </div>
+      <div class="inline">
+        <h5>Languages Spoken:</h5>
+        <label ng-repeat="language in main.volData.languages">
+          &nbsp;{{ language }}&nbsp;
+        </label>
       </div>
     </div>
-<hr>
+  </div>
+  <hr>
   <div>
     <h4>References</h4>
     <div ng-repeat="reference in main.volData.references">
