@@ -160,7 +160,7 @@ function mainController($http, $location, $sce) {
 
   main.times = ['Mornings', 'Afternoons', 'Evenings'];
 
-  main.contactMehtods = ['Phone', 'Email'];
+  main.contactMethods = ['Phone', 'Email'];
 
   main.languages = ['English', 'Spanish', 'Other...'];
 
