@@ -13,6 +13,7 @@
     "body-parser": "^1.17.2",
     "buttercms": "^1.0.12",
     "express": "^4.15.2",
+    "nodemon": "^1.11.0",
     "request": "^2.81.0",
     "sendgrid": "^5.1.0"
   }
