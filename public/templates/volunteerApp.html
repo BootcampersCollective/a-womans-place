@@ -1,4 +1,5 @@
 <h1>Volunteer Application</h1>
+<!-- PERSONAL INFORMATION -->
 <form action="https://formspree.io/chuckb1789@gmail.com" method="post" ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 1">
   <h3>- Personal Information -</h3>
   <div class="inline">
@@ -48,7 +49,7 @@
   <br>
   <div class="inline">
     <h5>Best Way to Contact You</h5>
-    <label ng-repeat="method in main.contactMehtods">
+    <label ng-repeat="method in main.contactMethods">
       <input name="WayToContact" type="checkbox" checklist-model="main.volData.contactMethods" checklist-value="method">&nbsp;{{ method }}&nbsp;
     </label>
   </div>
@@ -61,6 +62,9 @@
   <br>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END PERSONAL INFORMATION -->
+
+<!-- EDUCATION -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 2">
   <h3>- Education -</h3>
   <div class="inline">
@@ -100,6 +104,9 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END EDUCATION -->
+
+<!-- REFERENCES -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 3">
   <h3>- References -</h3>
   <h4>
@@ -168,30 +175,49 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next" ng-click="main.saveRefs()">Next</button>
 </form>
+<!-- END REFERENCES -->
+
+<!-- WORK AND VOLUNTEER -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 4">
   <h3>- Work and Volunteer Experience -</h3>
-  <h4>Work Experience</h4>
-  <h5>Please list your work experience below</h5>
-  <textarea required class="description" ng-model="main.volData.workExp"></textarea>
-  <h4>Volunteer Experience</h4>
-  <h5>Please list your volunteer experience below</h5>
-  <textarea required class="description" ng-model="main.volData.volExp"></textarea>
+  <div class="inline">
+    <h4>Work Experience</h4>
+    <h5>Please list your work experience below</h5>
+    <textarea required class="description" ng-model="main.volData.workExp"></textarea>
+  </div>
+  <div class="inline">
+    <h4>Volunteer Experience</h4>
+    <h5>Please list your volunteer experience below</h5>
+    <textarea required class="description" ng-model="main.volData.volExp"></textarea>
+  </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END WORK AND VOLUNTEER -->
+
+<!-- MORE INFO -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 5">
   <h3>- More Info -</h3>
-  <h5>Why are you interested in volunteering at A Woman's Place?</h5>
-  <textarea required class="description" ng-model="main.volData.why"></textarea>
-  <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
-  <textarea required class="description" ng-model="main.volData.like"></textarea>
-  <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
-  <input required type="text" ng-model="main.volData.how">
+  <div class="inline">
+    <h5>Why are you interested in volunteering at A Woman's Place?</h5>
+    <textarea required class="description" ng-model="main.volData.why"></textarea>
+  </div>
+  <div class="inline">
+    <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
+    <textarea required class="description" ng-model="main.volData.like"></textarea>
+  </div>
+  <div class="inline">
+    <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
+    <input required type="text" ng-model="main.volData.how">
+  </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END MORE INFO -->
+
+<!-- SCHEDULE -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 6">
   <h3>- Schedule -</h3>
   <div class="inline">
@@ -216,12 +242,15 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<!-- END SCHEDULE -->
+
+<!-- ADDITIONAL QUESTIONS -->
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 7">
   <h3>- Additional Questions -</h3>
   <div>
     <h5>Have you ever been convicted of or charged with a crime?</h5>
-      <label><input type="radio" ng-model="main.volData.crime" value="Yes">&nbsp;Yes&nbsp;</label>
-      <label><input type="radio" ng-model="main.volData.crime" value="No">&nbsp;No&nbsp;</label>
+    <label><input type="radio" ng-model="main.volData.crime" value="Yes">&nbsp;Yes&nbsp;</label>
+    <label><input type="radio" ng-model="main.volData.crime" value="No">&nbsp;No&nbsp;</label>
   </div>
   <div ng-if="main.volData.crime == 'Yes'">
     <h5>If yes, please explain:</h5>
@@ -251,33 +280,36 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Review Application</button>
 </form>
+<!-- END ADDITIONAL QUESTIONS -->
+
+<!-- REVIEW APPLICATION -->
 <div ng-if="main.formPage === 8">
-    <h3>Review Application</h3>
-    <div>
-      <h4>Your Info</h4>
-      <div class="inline top-align">
-        <h5>Name</h5>
-        <label>{{ main.volData.first }} {{ main.volData.middle }} {{ main.volData.last }}</label>
-      </div>
-      <div class="inline top-align">
-        <h5>Address</h5>
-        <label>
-          {{ main.volData.street }}, {{ main.volData.city }}, {{ main.volData.state }} {{ main.volData.zip }}
-        </label>
-      </div>
-      <div class="inline top-align">
-        <h5>Phone</h5>
-        <label>
-          {{ main.volData.phone }}<br>
-          {{ main.volData.othPhone }}
-        </label>
-      </div>
-      <div class="inline top-align">
-        <h5>Email</h5>
-        <label>
-          {{ main.volData.email }}
-        </label>
-      </div>
+  <h3>Review Application</h3>
+  <div>
+    <h4>Your Info</h4>
+    <div class="inline top-align">
+      <h5>Name</h5>
+      <label>{{ main.volData.first }} {{ main.volData.middle }} {{ main.volData.last }}</label>
+    </div>
+    <div class="inline top-align">
+      <h5>Address</h5>
+      <label>
+        {{ main.volData.street }}, {{ main.volData.city }}, {{ main.volData.state }} {{ main.volData.zip }}
+      </label>
+    </div>
+    <div class="inline top-align">
+      <h5>Phone</h5>
+      <label>
+        {{ main.volData.phone }}<br>
+        {{ main.volData.othPhone }}
+      </label>
+    </div>
+    <div class="inline top-align">
+      <h5>Email</h5>
+      <label>
+        {{ main.volData.email }}
+      </label>
+    </div>
   </div>
   <div>
     <div class="inline">
@@ -290,30 +322,30 @@
     </div>
   </div>
   <hr>
-    <div class="top-align inline">
-      <h4>Education</h4>
-      <div class="top-align">
-        <div class="inline">
-          <h5>Highest Education</h5>
-          <label>{{ main.volData.highestEd }}</label>
-        </div>
-        <div class="inline">
-          <h5>Major</h5>
-          <label>{{ main.volData.major }}</label>
-        </div>
-        <div class="inline">
-          <h5>Date received and/or expected</h5>
-          <label>{{ main.volData.eduExpected }}</label>
-        </div>
-        <div class="inline">
-          <h5>Languages Spoken:</h5>
-          <label ng-repeat="language in main.volData.languages">
-            &nbsp;{{ language }}&nbsp;
-          </label>
-        </div>
+  <div class="top-align inline">
+    <h4>Education</h4>
+    <div class="top-align">
+      <div class="inline">
+        <h5>Highest Education</h5>
+        <label>{{ main.volData.highestEd }}</label>
+      </div>
+      <div class="inline">
+        <h5>Major</h5>
+        <label>{{ main.volData.major }}</label>
+      </div>
+      <div class="inline">
+        <h5>Date received and/or expected</h5>
+        <label>{{ main.volData.eduExpected }}</label>
+      </div>
+      <div class="inline">
+        <h5>Languages Spoken:</h5>
+        <label ng-repeat="language in main.volData.languages">
+          &nbsp;{{ language }}&nbsp;
+        </label>
       </div>
     </div>
-<hr>
+  </div>
+  <hr>
   <div>
     <h4>References</h4>
     <div ng-repeat="reference in main.volData.references">
