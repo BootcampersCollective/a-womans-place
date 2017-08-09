@@ -39,9 +39,9 @@ Dragée jelly fruitcake cookie cotton candy. Tiramisu oat cake cotton candy toot
 <!-- TODO: Fix this section... -->
 <div class="blue text-white section section-get-help">
   <h2 class="font">Affects on Youth</h2>
-  <div ng-repeat="affects_children in main.awp.affects_children">
-    <h4 class="font text-left"> {{ affects_children.heading }}</h4>
-    <div class="myFont text-left"> {{ affects_children.description }}</div>
+  <div ng-repeat="section in main.affectsChildren" ng-bind-html="section.description">
+    <h4 class="font text-left"> {{ section.heading }}</h4>
+    <div class="myFont text-left">{{ section.description }}</div>
   </div>
 </div>
 

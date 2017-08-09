@@ -34,6 +34,7 @@ function mainController($http, $location, $sce) {
     //     case '#/volunteerApp':
     //     case '#/wishlist':
     //     default:
+    // TODO: Figure out how to change this to reflect current tab.
             main.activeNav = 1;
     // }
 
@@ -79,7 +80,13 @@ function mainController($http, $location, $sce) {
             main.whatIsDv = $sce.trustAsHtml(main.awp.what_is_dv[0].description);
             main.warningSigns = $sce.trustAsHtml(main.awp.warning_signs[0].description);
 
-            // TODO: Need to add the main.awp.affects_children piece.
+            main.affectsChildren = [];
+            for(let i = 0; i < main.awp.affects_children.length; ++i) {
+                let affChildObj = {};
+                affChildObj['heading'] = main.awp.affects_children[i].heading;
+                affChildObj['description'] = $sce.trustAsHtml(main.awp.affects_children[0].description);
+                main.affectsChildren.push(affChildObj);
+            }
 
             /////////////////////// RESOURCES PAGE DATA //////////////////////////////
 
