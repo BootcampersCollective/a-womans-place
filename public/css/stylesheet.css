@@ -106,16 +106,6 @@ body {
     display: none;
 }
 
-.center {
-    text-align: center;
-}
-
-.centerInfo {
-    margin-left: 10%;
-    width: 80%;
-    padding: 1%;
-}
-
 .crisis {
     margin: 5px;
 }
@@ -234,19 +224,18 @@ body {
 .nav-link:hover {
     color: white;
     background-color: #954A87;
-    text-decoration: none;
 }
 
 .nav-active {
     color: white;
     background-color: #954A87;
-    text-decoration: none;
 }
 
 .nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: #ffffcc;
 }
 
 .newsletter {
@@ -255,7 +244,7 @@ body {
     margin-left: 20px;
 }
 
-.orange {
+.yellow {
     background-color: #ffffcc;
 }
 
@@ -270,24 +259,22 @@ body {
 .section {
     margin: 0px;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 10px 7%;
     display: inline-block;
     width: 100%;
     vertical-align: top;
+    text-align: justify;
 }
 
 .section p, .section-third p {
-    text-align: left;
+    text-align: justify;
 }
 
 .section-get-help {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 10px 7%;
 }
-
-
 
 .section-third {
     box-sizing: border-box;
@@ -321,6 +308,10 @@ body {
 
 .text-blue {
     color: #508AC7;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text-left {

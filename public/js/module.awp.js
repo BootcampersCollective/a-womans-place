@@ -42,5 +42,4 @@ function myRouter($routeProvider){
     .otherwise({
       redirectTo: '/'
     })
-
 }
