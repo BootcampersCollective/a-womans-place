@@ -106,16 +106,6 @@ body {
     display: none;
 }
 
-.center {
-    text-align: center;
-}
-
-.centerInfo {
-    margin-left: 10%;
-    width: 80%;
-    padding: 1%;
-}
-
 .crisis {
     margin: 5px;
 }
@@ -319,6 +309,10 @@ body {
 
 .text-blue {
     color: #508AC7;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text-left {
