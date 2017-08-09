@@ -255,7 +255,7 @@ body {
     margin-left: 20px;
 }
 
-.orange {
+.yellow {
     background-color: #ffffcc;
 }
 
@@ -277,7 +277,7 @@ body {
 }
 
 .section p, .section-third p {
-    text-align: left;
+    text-align: justify;
 }
 
 .section-get-help {
@@ -325,6 +325,10 @@ body {
 
 .text-left {
     text-align: left;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .text-orange {

@@ -78,6 +78,8 @@ function mainController($http, $location, $sce) {
             ///////////////////////  LEARN MORE PAGE DATA //////////////////////////////
             main.whatIsDvHeading = main.awp.what_is_dv[0].heading;
             main.whatIsDv = $sce.trustAsHtml(main.awp.what_is_dv[0].description);
+
+            main.warningSignsHeading = main.awp.warning_signs[0].heading;
             main.warningSigns = $sce.trustAsHtml(main.awp.warning_signs[0].description);
 
             main.affectsChildren = [];
