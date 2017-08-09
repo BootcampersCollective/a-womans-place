@@ -1,113 +1,110 @@
 <!DOCTYPE html>
 <html ng-app="awp">
-  <head>
-    <title>A Woman's Place</title>
-    <link href="https://fonts.googleapis.com/css?family=Karma|Lustria|Tangerine|Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/stylesheet.css">
-    <script src="https://use.fontawesome.com/37e2856d49.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/checklist-model/0.10.0/checklist-model.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="/js/module.awp.js"></script>
-    <script src="/js/controller.main.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-        emailjs.init("user_CuBG80OqHk7NqNoCVRLmk");
-        })();
-    </script>
-  </head>
-  <body ng-controller="mainController as main">
-    <div class="escape">
-    <a href="//www.google.com"> <button class="btn btn-danger">
-      <span class="glyphicon glyphicon-remove"></span> <span class="exit">Escape</span>
-      <div class="exit-des">Quickly exit site if in danger</div>
-      </button> </a>
-    </div>
-                              <!-- TOP BAR -->
-    <div class="top-bar">
-      <a href="mailto:info@awpdv.org" class="social-link"><span class="glyphicon glyphicon-envelope"></span></a>
-      <a href="https://www.facebook.com/AWPWeld/" class="social-link"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
-      <a href="https://twitter.com/AWPWeld" class="social-link"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-      <form action="//awpdv.us7.list-manage.com/subscribe/post?u=fdcd68af7757e7396fa645fa1&amp;id=eb867566ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div class="newsletter">
-          <h5 class="text-white text-center">Subscribe to our newsletter</h5>
-          <input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL" style="font-size: 80%; width: 200px;">
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fdcd68af7757e7396fa645fa1_eb867566ad" tabindex="-1" value=""></div>
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="padding: 3px; position: relative: bottom: 1px;">
+    <head>
+        <title>A Woman's Place</title>
+        <link href="https://fonts.googleapis.com/css?family=Karma|Lustria|Tangerine|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/stylesheet.css">
+        <script src="https://use.fontawesome.com/37e2856d49.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/checklist-model/0.10.0/checklist-model.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+        <script src="/js/module.awp.js"></script>
+        <script src="/js/controller.main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_CuBG80OqHk7NqNoCVRLmk");
+            })();
+        </script>
+    </head>
+    <body ng-controller="mainController as main">
+        <div class="escape">
+            <a href="//www.google.com"> <button class="btn btn-danger">
+                <span class="glyphicon glyphicon-remove"></span> <span class="exit">Escape</span>
+                <div class="exit-des">Quickly exit site if in danger</div>
+            </button> </a>
         </div>
-        <a href="#/giveHelp#give" class="social-link"><button type="button" name="donate" class='btn btn-success'>donate</button></a>
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <a href="mailto:info@awpdv.org" class="social-link"><span class="glyphicon glyphicon-envelope"></span></a>
+            <a href="https://www.facebook.com/AWPWeld/" class="social-link"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/AWPWeld" class="social-link"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+            <form action="//awpdv.us7.list-manage.com/subscribe/post?u=fdcd68af7757e7396fa645fa1&amp;id=eb867566ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div class="newsletter">
+                    <h5 class="text-white text-center">Subscribe to our newsletter</h5>
+                    <input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL" style="font-size: 80%; width: 200px;">
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fdcd68af7757e7396fa645fa1_eb867566ad" tabindex="-1" value=""></div>
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="padding: 3px; position: relative: bottom: 1px;">
+                </div>
+                <a href="#/giveHelp#give" class="social-link"><button type="button" name="donate" class='btn btn-success'>donate</button></a>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+            </form>
         </div>
-      </form>
-    </div>
-                              <!-- END TOP BAR -->
+        <!-- END TOP BAR -->
 
-                              <!-- START NAVBAR -->
-    <div class="logo">
-      <img src="resources/awp.png" alt="A woman's place banner" class="banner">
-      <div class="crisis-div inline">
-        <h4 class="text-purple crisis" style="font-size: 150%">24 Hour Crisis Hotline</h4>
-        <h4 class="crisis">970-356-4226 | 866-356-4226 <span class="glyphicon glyphicon-earphone"></span></h4>
-      </div>
-    </div>
-    <nav class="orange" style="border-radius: 5px 5px 0 0">
-      <a href="" class="hamburger-menu nav-link" ng-click="main.activeNav = 6; main.menuActive = !main.menuActive" ng-class="{'nav-active': main.activeNav === 6}">Menu<span class="glyphicon glyphicon-menu-hamburger"></span></a>
-      <div ng-if="main.menuActive" ng-mouseleave="main.menuActive = !main.menuActive" sytle="position: absolute;">
-        <a href="#/" class="small-nav-link"><div>Home</div></a>
-        <a href="#/about" class="small-nav-link"><div>About</div></a>
-        <a href="#/getHelp" class="small-nav-link" ng-click="main.getHelpData()"><div>Get Help</div></a>
-        <a href="#/dv" class="small-nav-link" ng-click="main.dvData()"><div>Learn More</div></a>
-        <a href="#/giveHelp" class="small-nav-link"><div>Get Involved</div></a>
-        <a href="#/resources" class="small-nav-link"><div>Resources</div></a>
-      </div>
-      <ul class="nav-list">
-        <a class="nav-link myFont" href="#/" ng-click="main.activeNav = 1" ng-class="{'nav-active': main.activeNav === 1}"><li>Home</li>
-        </a><a class="nav-link myFont" href="#/about" ng-click="main.activeNav = 2"  ng-class="{'nav-active': main.activeNav === 2}"><li>About Us</li>
-        </a><a class="nav-link myFont" href="#/getHelp" ng-click="main.activeNav = 3; main.getHelpData();"  ng-class="{'nav-active': main.activeNav === 3}"><li>Get Help</li>
-        </a><a class="nav-link myFont" href="#/dv" ng-click="main.activeNav = 4; main.dvData()"  ng-class="{'nav-active': main.activeNav === 4}"><li>Learn More</li>
-        </a><a class="nav-link myFont" href="#/giveHelp" ng-click="main.activeNav = 5"  ng-class="{'nav-active': main.activeNav === 5}"><li>Get Involved</li>
-        </a><a class="nav-link myFont"
-            href="#/resources"
-            ng-click="main.activeNav = 6"
-            ng-class="{'nav-active': main.activeNav === 6}">
-            <li>Resources</li></a>
-      </ul>
-    </nav>
-                        <!-- END NAVBAR  -->
+        <!-- START NAVBAR -->
+        <div class="logo">
+            <img src="resources/awp.png" alt="A woman's place banner" class="banner">
+            <div class="crisis-div inline">
+                <h4 class="text-purple crisis" style="font-size: 150%">24 Hour Crisis Hotline</h4>
+                <h4 class="crisis">970-356-4226 | 866-356-4226 <span class="glyphicon glyphicon-earphone"></span></h4>
+            </div>
+        </div>
+        <nav class="orange" style="border-radius: 5px 5px 0 0">
+            <a href="" class="hamburger-menu nav-link" ng-click="main.activeNav = 6; main.menuActive = !main.menuActive" ng-class="{'nav-active': main.activeNav === 6}">Menu<span class="glyphicon glyphicon-menu-hamburger"></span></a>
+            <div ng-if="main.menuActive" ng-mouseleave="main.menuActive = !main.menuActive" sytle="position: absolute;">
+                <a href="#/" class="small-nav-link"><div>Home</div></a>
+                <a href="#/about" class="small-nav-link"><div>About</div></a>
+                <a href="#/getHelp" class="small-nav-link" ng-click="main.getHelpData()"><div>Get Help</div></a>
+                <a href="#/dv" class="small-nav-link" ng-click="main.dvData()"><div>Learn More</div></a>
+                <a href="#/giveHelp" class="small-nav-link"><div>Get Involved</div></a>
+                <a href="#/resources" class="small-nav-link"><div>Resources</div></a>
+            </div>
+            <ul class="nav-list">
+                <a class="nav-link myFont" href="#/" ng-click="main.activeNav = 1" ng-class="{'nav-active': main.activeNav === 1}"><li>Home</li></a>
+                <a class="nav-link myFont" href="#/about" ng-click="main.activeNav = 2"  ng-class="{'nav-active': main.activeNav === 2}"><li>About Us</li></a>
+                <a class="nav-link myFont" href="#/getHelp" ng-click="main.activeNav = 3; main.getHelpData();"  ng-class="{'nav-active': main.activeNav === 3}"><li>Get Help</li></a>
+                <a class="nav-link myFont" href="#/dv" ng-click="main.activeNav = 4; main.dvData()"  ng-class="{'nav-active': main.activeNav === 4}"><li>Learn More</li></a>
+                <a class="nav-link myFont" href="#/giveHelp" ng-click="main.activeNav = 5"  ng-class="{'nav-active': main.activeNav === 5}"><li>Get Involved</li></a>
+                <a class="nav-link myFont" href="#/resources" ng-click="main.activeNav = 6" ng-class="{'nav-active': main.activeNav === 6}"><li>Resources</li></a>
+            </ul>
+        </nav>
+        <!-- END NAVBAR  -->
 
-    <ng-view></ng-view>
+        <ng-view></ng-view>
 
-<div class="section myFont">
-    <div class="text-center">
-      <h4>If you or someone you know is experiencing domestic violence, call:</h4>
-      <h5>Crisis: 970-356-4226<br>
-        Toll Free: 866-356-4226<br>
-        Business: 970-351-0476<br>
-        Email: info@awpdv.org</h5>
-    </div>
-  </div>
+        <div class="section myFont">
+            <div class="text-center">
+                <h4>If you or someone you know is experiencing domestic violence, call:</h4>
+                <h5>Crisis: 970-356-4226<br>
+                    Toll Free: 866-356-4226<br>
+                    Business: 970-351-0476<br>
+                    Email: info@awpdv.org</h5>
+            </div>
+        </div>
 
-    <div class="section">
-      <div class="text-center">
-        <img src="resources/handi.png" alt="" class="foot-img">
-        <img src="resources/united-way.jpg" alt="" class="foot-img">
-        <img src="resources/sehabla.gif" alt="" class="foot-img">
-      </div>
-    </div>
+        <div class="section">
+            <div class="text-center">
+                <img src="resources/handi.png" alt="" class="foot-img">
+                <img src="resources/united-way.jpg" alt="" class="foot-img">
+                <img src="resources/sehabla.gif" alt="" class="foot-img">
+            </div>
+        </div>
 
 
-    <footer class="well">
-      A Woman's Place does not discriminate against any person because of race, color, national or
-      ethnic origin, age, religion, disability, sex, sexual orientation, gender identity and expression,
-      veteran status, or any other characteristic protected under applicable federal or state law.
-    </footer>
-  </body>
+        <footer class="well">
+            A Woman's Place does not discriminate against any person because of race, color, national or
+            ethnic origin, age, religion, disability, sex, sexual orientation, gender identity and expression,
+            veteran status, or any other characteristic protected under applicable federal or state law.
+        </footer>
+    </body>
 </html>

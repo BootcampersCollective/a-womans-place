@@ -10,33 +10,31 @@ function mainController($http, $location, $sce) {
 
     // Figures out which page user is on when they enter the site and selects the
     // correct navigation link
-    // console.log($location);
-    // switch ($location.$$absUrl){
-    //     case '#/':
-    //         main.activeNav = 1;
-    //         break;
-    //     case '#/about':
-    //         main.activeNav = 2;
-    //         break;
-    //     case '#/getHelp':
-    //         main.activeNav = 3;
-    //         break;
-    //     case '#/dv':
-    //         main.activeNav = 4;
-    //         break;
-    //     case '#/giveHelp':
-    //         main.activeNav = 5;
-    //         break;
-    //     case '#/resources':
-    //     // main.activeNav = 6;
-    //     // break;
-    //     case '#/volunteer':
-    //     case '#/volunteerApp':
-    //     case '#/wishlist':
-    //     default:
-    // TODO: Figure out how to change this to reflect current tab.
+    switch ($location.$$url){
+        case '/':
             main.activeNav = 1;
-    // }
+            break;
+        case '/about':
+            main.activeNav = 2;
+            break;
+        case '/getHelp':
+            main.activeNav = 3;
+            break;
+        case '/dv':
+            main.activeNav = 4;
+            break;
+        case '/giveHelp':
+            main.activeNav = 5;
+            break;
+        case '/resources':
+            main.activeNav = 6;
+            break;
+        case '/volunteer':
+        case '/volunteerApp':
+        case '/wishlist':
+        default:
+            main.activeNav = 1;
+    }
 
     // Value used to dynamically set height of YouTube video and adjacent divs on home page
     main.ytHeight = $(window).height() / 3;
@@ -46,7 +44,6 @@ function mainController($http, $location, $sce) {
         .then(function(res) {
             // Main object of CMS response
             main.awp = res.data.data;
-            console.log(main.awp);
 
             // the butter-cms response sends sends many description values as
             // HTML text. the butter-cms gives the option of having a text area
@@ -57,7 +54,6 @@ function mainController($http, $location, $sce) {
             main.prepToLeave        = $sce.trustAsHtml(main.awp.preparing_to_leave[0].description);
             main.safetyPlan         = $sce.trustAsHtml(main.awp.creating_a_safety_plan[0].description);
             main.onlinePrivacy      = $sce.trustAsHtml(main.awp.protecting_online_privacy[0].description);
-            // console.log(main.awp.obstacles);
 
             /////////////////////// HOME PAGE DATA //////////////////////////////////
             // Data used in bootstrap carousel
@@ -173,7 +169,6 @@ function mainController($http, $location, $sce) {
 
     main.submitVolApp = function () {
         let volunteerData = main.volData;
-        console.log(volunteerData);
         $http.post('/volunteerSubmit', volunteerData)
             .then (function success(response) {
                 console.log("successful post")

@@ -224,13 +224,11 @@ body {
 .nav-link:hover {
     color: white;
     background-color: #954A87;
-    text-decoration: none;
 }
 
 .nav-active {
     color: white;
     background-color: #954A87;
-    text-decoration: none;
 }
 
 .nav-list {
