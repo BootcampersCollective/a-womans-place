@@ -7,29 +7,28 @@
 </div>
 </div>
 <h2 class="purple font text-white home-head"> {{ main.awp.learn_more_page_banner }} </h2>
-<div class="section section-get-help">
+<div class="section">
   <h2 class="font text-purple"> {{ main.awp.what_is_dv[0].heading }}</h2>
   <div ng-bind-html="main.whatIsDv" id="what-is-dv" class="myFont"></div>
 </div>
 
-<div class="yellow section section-get-help">
+<div class="yellow section">
   <h2 class="font"> Dynamics of Abuse</h2>
   <!-- <div ng-repeat=""> -->
     <h4 class="font"></h4>
-  <!-- TODO: If reading in from butterCMS, may need remove text-justify property -->
-    <div class="myFont text-justify">Brownie gingerbread candy. Pie oat cake wafer oat cake marzipan tootsie roll chocolate bar apple pie biscuit. Carrot cake toffee ice cream carrot cake brownie jelly-o tootsie roll gingerbread sweet roll. Carrot cake muffin pie sesame snaps dessert lemon drops wafer cake. Caramels carrot cake tiramisu cookie bear claw wafer. Cupcake brownie chocolate cake liquorice. Gummi bears wafer pastry candy.
+    <div class="myFont">Brownie gingerbread candy. Pie oat cake wafer oat cake marzipan tootsie roll chocolate bar apple pie biscuit. Carrot cake toffee ice cream carrot cake brownie jelly-o tootsie roll gingerbread sweet roll. Carrot cake muffin pie sesame snaps dessert lemon drops wafer cake. Caramels carrot cake tiramisu cookie bear claw wafer. Cupcake brownie chocolate cake liquorice. Gummi bears wafer pastry candy.
 Jelly beans caramels apple pie lollipop cheesecake dragée danish candy. Dessert carrot cake chocolate cake gingerbread candy canes. Cake icing gummi bears halvah.
 Cake gummies wafer gingerbread. Cake tootsie roll dragée dessert carrot cake lemon drops carrot cake. Biscuit wafer cake pie halvah muffin tart.
 Dragée jelly fruitcake cookie cotton candy. Tiramisu oat cake cotton candy tootsie roll tart bear claw. Oat cake candy canes lemon drops chocolate cake. Pudding bear claw pastry halvah tootsie roll carrot cake.</div>
   <!-- </div> -->
 </div>
 
-<div class="blue text-white section section-get-help">
+<div class="blue text-white section">
   <h2 class="font"> {{ main.warningSignsHeading }}</h2>
   <div id="warning-signs" class="myFont" ng-bind-html="main.warningSigns"></div>
 </div>
 
-<div class="yellow section section-get-help">
+<div class="yellow section">
   <h2 class="font"> Obstacles &amp; Barriers to Leaving</h2>
   <div ng-repeat="obstacle in main.awp.obstacles">
     <h4 class="font"> {{ obstacle.heading }}</h4>
@@ -38,7 +37,7 @@ Dragée jelly fruitcake cookie cotton candy. Tiramisu oat cake cotton candy toot
 </div>
 
 <!-- TODO: Fix this section... -->
-<div class="blue text-white section section-get-help">
+<div class="blue text-white section">
   <h2 class="font">Affects on Youth</h2>
   <div ng-repeat="section in main.affectsChildren">
     <h4 class="font" ng-bind="section.heading"></h4>
