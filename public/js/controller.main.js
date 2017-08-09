@@ -42,15 +42,16 @@ function mainController($http, $location, $sce) {
 
     // Request to back-end that makes call to CMS
     $http.get('/cmsdata')
-        .then(function(res){
+        .then(function(res) {
             // Main object of CMS response
             main.awp = res.data.data;
-            // console.log(main.awp);
+            console.log(main.awp);
 
-            // the butter-cms response sends sends many description values as HTML text.
-            // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats all in it as HTML.
-            // This is how (one way?) to make the HTML in those discriptions acceptable to display correctly in angularJS.
-            // They have to be set as safe...
+            // the butter-cms response sends sends many description values as
+            // HTML text. the butter-cms gives the option of having a text area
+            // set as a WYSIWYG editor, which formats all in it as HTML. This is
+            // how (one way?) to make the HTML in those descriptions acceptable
+            // to display correctly in angularJS. They have to be set as safe...
             main.communityResources = $sce.trustAsHtml(main.awp.community_resources[0].description);
             main.prepToLeave        = $sce.trustAsHtml(main.awp.preparing_to_leave[0].description);
             main.safetyPlan         = $sce.trustAsHtml(main.awp.creating_a_safety_plan[0].description);
@@ -74,9 +75,11 @@ function mainController($http, $location, $sce) {
 
 
             ///////////////////////  LEARN MORE PAGE DATA //////////////////////////////
-            main.whatIsDv = main.awp.what_is_dv[0].description;
-            main.warningSigns = main.awp.warning_signs[0].description;
+            main.whatIsDvHeading = main.awp.what_is_dv[0].heading;
+            main.whatIsDv = $sce.trustAsHtml(main.awp.what_is_dv[0].description);
+            main.warningSigns = $sce.trustAsHtml(main.awp.warning_signs[0].description);
 
+            // TODO: Need to add the main.awp.affects_children piece.
 
             /////////////////////// RESOURCES PAGE DATA //////////////////////////////
 
@@ -87,24 +90,6 @@ function mainController($http, $location, $sce) {
 
             if ($location.$$absUrl.slice(17) === '#/getHelp'){
                 main.getHelpData();
-            }
-
-            /////////////////////// LEARN MORE PAGE DATA /////////////////////////////
-
-            main.dvData = function() {
-                setTimeout(function(){
-                    let whatIsDV = $('#what-is-dv');
-                    let warningSigns = $('#warning-signs');
-                    //var obstacles = $('#obstacles');
-
-                    //obstacles[0].innerHTML = main.awp.obstacles[0].description;
-                    warningSigns[0].innerHTML = main.warningSigns;
-                    whatIsDV[0].innerHTML = main.whatIsDv;
-                }, 500);
-            };
-            // Checks to see if this is starting page
-            if ($location.$$absUrl.slice(17) === '#/dv'){
-                main.dvData();
             }
 
             // Save events info into array
@@ -124,10 +109,6 @@ function mainController($http, $location, $sce) {
 
             main.rightDirectors = main.board.slice(Math.ceil(main.board.length/2));
             main.leftDirectors = main.board.splice(0, Math.ceil(main.board.length/2));
-
-
-
-
 
 
             // Images on the about page
