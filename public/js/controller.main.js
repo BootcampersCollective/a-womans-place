@@ -8,9 +8,18 @@ function mainController($http, $location, $sce) {
     let main = this;
     main.$sce = $sce;
 
-    // Figures out which page user is on when they enter the site and selects the
-    // correct navigation link
-    switch ($location.$$url){
+    // Grabs the route. See examples:
+    //      localhost:8080/#/ : the url is /
+    //      localhost: 8080/#/about: the url is /about
+    // Splits on the octothorpe for urls that have sub-sections and grabs
+    // the first element in the resulting array. For example:
+    //      localhost:8080/#/getHelp#cyberstalking
+    // Splitting the url results in ['\getHelp', 'cyberstalking'].
+    // The first element of the array '/getHelp' can now be matched
+    // on so the correct tab stays highlighted. For urls that do not have
+    // a sub-section, see the first example for how this is matched.
+    let pageUrl = ($location.$$url).split('#')[0];
+    switch (pageUrl){
         case '/':
             main.activeNav = 1;
             break;
