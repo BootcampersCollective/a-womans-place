@@ -13,7 +13,7 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[0].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[0].paragraph }}</p>
-        <a href="#/getHelp#cyberstalking" ng-click="main.getHelpData()"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
+        <a href="#/getHelp#cyberstalking" ng-click="main.activeNav = 3"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
       </div>
       <!-- took this out of <a> in line 16 ng-click="main.getHelpData()" -->
     </div>
@@ -22,7 +22,7 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[1].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[1].paragraph }}</p>
-        <a href="#/dv" ng-click="main.activeNav = 4; main.dvData()"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
+        <a href="#/dv" ng-click="main.activeNav = 4"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
       </div>
     </div>
     <div class="item">
@@ -30,7 +30,7 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[2].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[2].paragraph }}</p>
-        <a href="#/giveHelp"><button class="btn btn-primary car-button font text-shadow">Get Involved</button></a>
+        <a href="#/giveHelp" ng-click="main.activeNav = 5"><button class="btn btn-primary car-button font text-shadow">Get Involved</button></a>
       </div>
     </div>
   </div>
