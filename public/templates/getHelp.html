@@ -1,22 +1,23 @@
 <div style="position: relative">
   <img src="{{main.awp.get_help_page_image}}" alt="" class="back">
-<div class="myFont serve-head serve-head-purple text-white">
-  <h3 class="font text-white text-shadow">
-   {{ main.awp.get_help_page_box }}
- </h3>
+  <div class="myFont serve-head serve-head-purple text-white">
+    <h3 class="font text-white text-shadow">
+      {{ main.awp.get_help_page_box }}
+    </h3>
+  </div>
 </div>
-</div>
-<h2 class="purple font text-white home-head">{{ main.awp.get_help_page_banner }}</h2>
 
+<h2 class="purple font text-white home-head">{{ main.awp.get_help_page_banner }}</h2>
 <div class="section section-get-help blue text-white">
   <h2 class="font">{{ main.awp.creating_a_safety_plan[0].heading}}</h2>
   <div ng-bind-html="main.safetyPlan" class="myFont text-left"></div>
 </div>
+
 <div class="section section-get-help yellow">
   <h2 class="font">{{ main.awp.preparing_to_leave[0].heading }}</h2>
   <div ng-bind-html="main.prepToLeave" class="myFont text-left"></div>
-
 </div>
+
 <h2 class="text-purple font">Services</h2>
 <h4 class="myFont">All resources listed here can be accessed by our residential AND non-residential clients.</h4>
 <div class="top-services myFont">
@@ -27,7 +28,9 @@
         {{ service.service_description }}
       </p>
     </div>
-  </div><div class="section">
+  </div>
+
+  <div class="section">
     <div ng-repeat="service in main.rightServices">
       <h3 class="font text-purple">{{ service.service_name }}</h3>
       <p>
@@ -37,12 +40,10 @@
   </div>
 </div>
 
-<div class="section section-get-help blue text-white">
-    <div id="cyberstalking"></div>
-    <h2 class="font">{{ main.awp.protecting_online_privacy[0].heading}}</h2>
-    <!-- <div id="online-privacy" class="myFont text-left"></div> -->
-    <div ng-bind-html="main.onlinePrivacy" class="myFont text-left"></div>
-
+<div id="cyberstalking" class="section section-get-help blue text-white">
+  <h2 class="font">{{ main.awp.protecting_online_privacy[0].heading}}</h2>
+  <!-- <div id="online-privacy" class="myFont text-left"></div> -->
+  <div ng-bind-html="main.onlinePrivacy" class="myFont text-left"></div>
 </div>
 
 
