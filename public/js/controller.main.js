@@ -97,14 +97,7 @@ function mainController($http, $location, $sce) {
 
             /////////////////////// RESOURCES PAGE DATA //////////////////////////////
 
-
             main.resources = main.awp.resources;
-
-
-
-            if ($location.$$absUrl.slice(17) === '#/getHelp'){
-                main.getHelpData();
-            }
 
             // Save events info into array
             main.events = main.awp.events;
