@@ -34,16 +34,20 @@
 
 </div>
 
-<div class="top-services myFont">
-  <div class="section">
+<div class="top-services myFont" id="board-directors">
+  <div class="section" id="left-directors">
     <div ng-repeat="director in main.leftDirectors">
       <h4 class="font text-purple">{{ director.name }}</h4>
       <h5> {{ director.organization}} </h5>
     </div>
-  </div><div class="section">
+  </div>
+  <div class="section" id="right-directors">
     <div ng-repeat="director in main.rightDirectors">
       <h4 class="font text-purple">{{ director.name }}</h4>
       <h5> {{ director.organization }}</h5>
     </div>
   </div>
-</div>
+
+  <div id="annual-report">
+    <button type="button" class="btn btn-lg btn-success center-block">Download 2016 Annual Report</button>
+  </div>

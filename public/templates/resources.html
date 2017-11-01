@@ -1,0 +1,27 @@
+<div style="position: relative">
+  <img src="../resources/pic3.jpg" alt="" class="back">
+<div class="myFont serve-head serve-head-purple text-white">
+  <h3 class="font text-white text-shadow">
+   <span class="text-blue">Purple</span> <span class="text-orange">Box</span> with Picture
+ </h3>
+</div>
+</div>
+<h2 class="purple font text-white home-head">Resources</h2>
+
+<div ng-repeat="resource in main.resources">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+      <h3 class="font text-left">
+        <a ng-href="{{main.$sce.trustAsResourceUrl(resource.url)}}">{{resource.name}}</h3></a>
+      </div>
+      <div class="col-sm-4">
+        <h4><a ng-href="{{main.$sce.trustAsResourceUrl(resource.url)}}">{{resource.url}}</a></h4>
+      </div>
+      <div class="col-sm-4">
+        <h4><a ng-href="tel:+{{resource.contact}}{{main.$sce.trustAsResourceUrl(resource.contact)}}">{{resource.contact}}</a></h4>
+      </div>
+    </div>
+  </div>
+
+</div>

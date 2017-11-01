@@ -11,11 +11,85 @@
 <div class="section blue text-white myFont" style="border-radius: 0 0 0 5px">
   <h4>Interested in Volunteering or an Internship?</h4>
   <a href="#/volunteer"><button class="btn btn-success">Volunteer/Intern</button></a>
-</div><div class="section orange myFont" style="border-radius: 0 0 5px 0">
-  <h4>Donate Funds or Check Out Our Wishlist</h4>
-  <a href="https://www.paypal.com/donate/?token=eQhL4pPDHlZFN0YIzykm7H-gB1vCpCKh7aeDA6226BhEbF3K8LprW8dfxpVQlBu-v-kGU0"><button class="btn btn-primary">Donate</button></a>
-  <a href="#/wishlist"><button class="btn btn-success">Wishlist</button></a>
+</div>
+
+<div class="section orange myFont" style="border-radius: 0 0 5px 0" id="give">
+  <h4>Ways to Give</h4>
+      <a href="https://www.paypal.com/donate/?token=azeMkAC07J58mM0VmTlxra0QFPj7jrAmj5kqCT0eHJc1OigCdFpy_kEADZKJD9L-7I16zG" ><button class="btn btn-primary">PayPal Donation</button></a>
+      <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=28135"><button class="btn btn-primary">Colorado Gives</button></a>
+      <a href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_se_ssr_srch_stsr?q=A+Woman%27s+Place+Inc%2C+Greeley+CO&orig=%2F" ><button class="btn btn-primary">Amazon Smile</button></a>
+
+</div>
+
+  <!-- <a href="https://www.paypal.com/donate/?token=eQhL4pPDHlZFN0YIzykm7H-gB1vCpCKh7aeDA6226BhEbF3K8LprW8dfxpVQlBu-v-kGU0"><button class="btn btn-primary">Donate</button></a> -->
+
+<div class="container-fluid">
+  <div class="row padding-bottom">
+    <div class="col-sm-6 no-padding">
+
+      <!-- VOLUNTEER SECTION -->
+
+      <h3 class="home-head font">Opportunities Include</h3>
+      <div class="top-services myFont">
+        <div class="section" style="width: 100%;">
+          <div ng-repeat="position in main.leftPositions">
+            <h3 class="font text-purple">{{ position.name }}</h3>
+            <p>
+              {{ position.description }}
+            </p>
+          </div>
+        </div>
+        <div class="section"  style="width: 100%;">
+          <div ng-repeat="position in main.rightPositions">
+            <h3 class="font text-purple">{{ position.name }}</h3>
+            <p>
+              {{ position.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="#/volunteerApp"><button class="btn btn-primary">Apply Online</button></a><br>
+    </div>
+    <div class="col-sm-6 no-padding">
+
+
+      <!-- WISHLIST SECTION -->
+
+      <h3 class="font home-head">What We Need</h3>
+      <div class="top-services myFont">
+        <div class="section"  style="width: 100%;">
+          <div ng-repeat="item in main.leftWishlist">
+            <h3 class="font text-purple">{{ item.name }}</h3>
+            <p>
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+        <div class="section"  style="width: 100%;">
+          <div ng-repeat="item in main.rightWishlist">
+            <h3 class="font text-purple">{{ item.name }}</h3>
+            <p>
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h3 class="purple text-white home-head font">Events</h3>
+  </div>
+  <div>
+    <img src="http://webascentevents.com/wp-content/uploads/2016/10/may-2017-calendar-1.png" alt="Calendar Mockup" style="width: 100vw">
+  </div>
+
 </div>
 <div class="font text-purple">
   <h3>Outreach and Community education for youth, teens, and adults</h3>
+
+<form>
+<input class="donorPolicy btn btn-primary myFont"  type="button" value="Donor Policy" onclick="window.location.href='https://drive.google.com/file/d/0B3gVtf6R-3eASXhpaTcyRmtVYXM/view?usp=sharing'" />
+</form>
+
 </div>

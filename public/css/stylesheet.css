@@ -112,6 +112,12 @@ body {
   text-align: center;
 }
 
+.centerInfo {
+  margin-left: 10%;
+  width: 80%;
+  padding: 1%;
+}
+
 .crisis {
   margin: 5px;
 }
@@ -178,6 +184,10 @@ body {
   text-align: left;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .home-head {
   color: white;
   background-color: #954A87;
@@ -204,7 +214,7 @@ body {
 .nav-link {
   font-size: 135%;
   display: inline-block;
-  width: 20%;
+  width: 15.67%;
   box-sizing: border-box;
   padding: 15px;
   text-decoration: none;
@@ -215,6 +225,12 @@ body {
 
 .hamburger-menu {
   display: none;
+}
+
+.lineBreak {
+  background-color: #954A87;
+  height: 3px;
+  border-radius: 12px;
 }
 
 .nav-link:hover {
@@ -258,7 +274,7 @@ body {
   box-sizing: border-box;
   padding: 10px 20px;
   display: inline-block;
-  width: 50%;
+  width: 100%;
   vertical-align: top;
 }
 
@@ -357,6 +373,10 @@ body {
   padding-bottom: 15px;
 }
 
+.padding-bottom {
+  padding-bottom: 15px;
+}
+
 .well {
   border-radius: 5px;
 }
@@ -374,6 +394,12 @@ body {
 .about-sec-one {
   vertical-align: middle;
   padding: 15px
+}
+
+.donate-section{
+  position: relative;
+  left: 50vw;
+  transform: translate(-50%);
 }
 
 @media all and (max-width: 1110px) {
@@ -462,10 +488,6 @@ body {
     top: 50px;
   }
 
-  .contact {
-    display: none;
-  }
-
   .escape {
     left: 80%;
   }
@@ -491,4 +513,28 @@ body {
   .section {
     width: 100%;
   }
+
+}
+
+#board-directors {
+  overflow: hidden;
+}
+
+#left-directors {
+  max-width: 500px;
+  overflow: hidden;
+  padding: 10px;
+  margin-left: 70px;
+}
+
+#right-directors {
+  float:right;
+  max-width: 500px;
+  padding: 20px;
+  padding-top: 10px;
+  margin-right: 70px;
+}
+
+#annual-report {
+  margin-top: 20px;
 }

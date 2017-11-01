@@ -1,61 +1,61 @@
 <h1>Volunteer Application</h1>
-<form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 1">
+<form action="https://formspree.io/chuckb1789@gmail.com" method="post" ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 1">
   <h3>- Personal Information -</h3>
   <div class="inline">
     <h5>First Name</h5>
-    <input type="text" placeholder="First" ng-model="main.volData.first">
+    <input name="FirstName" required type="text" placeholder="First" ng-model="main.volData.first">
   </div>
   <div class="inline">
     <h5>Middle Name</h5>
-    <input type="text" placeholder="Middle" ng-model="main.volData.middle">
+    <input name="MiddleName" type="text" placeholder="Middle" ng-model="main.volData.middle">
   </div>
   <div class="inline">
     <h5>Last Name</h5>
-    <input type="text" placeholder="Last" ng-model="main.volData.last">
+    <input name="LastName" required type="text" placeholder="Last" ng-model="main.volData.last">
   </div>
   <br>
   <div class="inline">
     <h5>Street Address</h5>
-    <input type="text" placeholder="Address" ng-model="main.volData.street">
+    <input name="StreetAddress"type="text" placeholder="Address" ng-model="main.volData.street">
   </div>
   <div class="inline">
     <h5>City</h5>
-    <input type="text" placeholder="City" ng-model="main.volData.city">
+    <input name="City" required type="text" placeholder="City" ng-model="main.volData.city">
   </div>
   <div class="inline">
     <h5>State</h5>
-    <select ng-model="main.volData.state">
-      <option ng-repeat="state in main.formStates" value="{{state}}">{{ state }}</option>
+    <select name="State" ng-model="main.volData.state">
+      <option required ng-repeat="state in main.formStates" value="{{state}}">{{ state }}</option>
     </select>
   </div>
   <div class="inline">
     <h5>Zip</h5>
-    <input type="number" placeholder="Zip Code" ng-model="main.volData.zip" cols="5">
+    <input name="ZipCode" required type="number" placeholder="Zip Code" ng-model="main.volData.zip" cols="5">
   </div>
   <br>
   <div class="inline">
     <h5>Phone</h5>
-    <input type="tel" placeholder="Phone" ng-model="main.volData.phone">
+    <input name="PhoneNumber" required type="tel" placeholder="Phone" ng-model="main.volData.phone">
   </div>
   <div class="inline">
     <h5>Other Phone</h5>
-    <input type="tel" placeholder="Other Phone" ng-model="main.volData.otherPhone">
+    <input name="OtherPhone" type="tel" placeholder="Other Phone" ng-model="main.volData.otherPhone">
   </div>
   <div class="inline">
     <h5>Email</h5>
-    <input type="email" placeholder="Email" ng-model="main.volData.email">
+    <input name="Email" required type="email" placeholder="Email" ng-model="main.volData.email">
   </div>
   <br>
   <div class="inline">
     <h5>Best Way to Contact You</h5>
     <label ng-repeat="method in main.contactMehtods">
-      <input type="checkbox" checklist-model="main.volData.contactMethods" checklist-value="method">&nbsp;{{ method }}&nbsp;
+      <input name="WayToContact" type="checkbox" checklist-model="main.volData.contactMethods" checklist-value="method">&nbsp;{{ method }}&nbsp;
     </label>
   </div>
   <div class="inline">
     <h5>Best Time to Contact You</h5>
     <label ng-repeat="time in main.times">
-      <input type="checkbox" checklist-model="main.volData.times" checklist-value="time">&nbsp;{{ time }}&nbsp;
+      <input name="TimeToContact" type="checkbox" checklist-model="main.volData.times" checklist-value="time">&nbsp;{{ time }}&nbsp;
     </label>
   </div>
   <br>
@@ -81,20 +81,20 @@
   <br>
   <div class="inline">
     <h5>Major/Field of Study</h5>
-    <input type="text" ng-model="main.volData.major">
+    <input name="FieldOfStudy" type="text" ng-model="main.volData.major">
   </div>
   <div class="inline">
     <h5>Date Received/Expected</h5>
-    <input type="date" ng-model="main.volData.eduExpected">
+    <input name="GraduationDate" type="date" ng-model="main.volData.eduExpected">
   </div>
   <br>
   <div class="inline">
     <h5>Languages Spoken</h5>
     <label ng-repeat="language in main.languages">
-      <input type="checkbox" checklist-model="main.volData.languages" checklist-value="language">&nbsp;{{ language }}&nbsp;
+      <input name="LanguagesSpoken" type="checkbox" checklist-model="main.volData.languages" checklist-value="language">&nbsp;{{ language }}&nbsp;
     </label>
     <br>
-    <input type="text" placeholder="Other..." ng-model="main.other" ng-if="main.volData.language.other">
+    <input name="OtherLanguageSpoke" type="text" placeholder="Other..." ng-model="main.other" ng-if="main.volData.language.other">
   </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
@@ -108,61 +108,61 @@
   </h4>
   <div class="inline">
     <h5>Name</h5>
-    <input type="text" placeholder="Name" ng-model="main.volData.references[0].name">
+    <input name="referenceName1" required type="text" placeholder="Name" ng-model="main.volData.references[0].name">
   </div>
   <div class="inline">
     <h5>Relationship to You</h5>
-    <input type="text" placeholder="Relationship" ng-model="main.volData.references[0].relationship">
+    <input name="referenceRelationship1" required type="text" placeholder="Relationship" ng-model="main.volData.references[0].relationship">
   </div>
   <div class="inline">
     <h5>Phone/Contact Information</h5>
-    <input type="tel" placeholder="Phone" ng-model="main.volData.references[0].phone">
+    <input name="referencePhone1" required type="tel" placeholder="Phone" ng-model="main.volData.references[0].phone">
   </div>
   <br>
   <div class="inline">
     <h5>Name</h5>
-    <input type="text" placeholder="Name" ng-model="main.volData.references[1].name">
+    <input name="referenceName2" required type="text" placeholder="Name" ng-model="main.volData.references[1].name">
   </div>
   <div class="inline">
     <h5>Relationship to You</h5>
-    <input type="text" placeholder="Relationship" ng-model="main.volData.references[1].relationship">
+    <input required name= "referenceRelationship2" type="text" placeholder="Relationship" ng-model="main.volData.references[1].relationship">
   </div>
   <div class="inline">
     <h5>Phone/Contact Information</h5>
-    <input type="tel" placeholder="Phone" ng-model="main.volData.references[1].phone">
+    <input required name="referencePhone2" type="tel" placeholder="Phone" ng-model="main.volData.references[1].phone">
   </div>
   <hr>
   <h3>- Emergency Contact -</h3>
   <div class="inline">
     <h5>Name</h5>
-    <input type="text" placeholder="Name" ng-model="main.volData.emc.name">
+    <input required name="emergencyName" type="text" placeholder="Name" ng-model="main.volData.emc.name">
   </div>
   <div class="inline">
     <h5>Relationship to You</h5>
-    <input type="text" placeholder="Relationship to You" ng-model="main.volData.emc.relationship">
+    <input name="emergencyRelationship" type="text" placeholder="Relationship to You" ng-model="main.volData.emc.relationship">
   </div>
   <br>
   <div class="inline">
     <h5>Street Address</h5>
-    <input type="text" placeholder="Address" ng-model="main.volData.emc.street">
+    <input name="emergencyAddress" type="text" placeholder="Address" ng-model="main.volData.emc.street">
   </div>
   <div class="inline">
-    <input type="text" placeholder="City" ng-model="main.volData.emc.city">
+    <input name="emergencyCity" type="text" placeholder="City" ng-model="main.volData.emc.city">
   </div>
   <div class="inline">
     <h5>State</h5>
     <select ng-model="main.volData.emc.state">
-      <option ng-repeat="state in main.formStates" value="{{state}}">{{ state }}</option>
+      <option name="emergencyState" ng-repeat="state in main.formStates" value="{{state}}">{{ state }}</option>
     </select>
   </div>
   <div class="inline">
     <h5>Zip</h5>
-    <input type="number" placeholder="Zip Code" ng-model="main.volData.emc.zip">
+    <input name="emergencyZip" type="number" placeholder="Zip Code" ng-model="main.volData.emc.zip">
   </div>
   <br>
   <div class="inline">
     <h5>Phone</h5>
-    <input type="tel" placeholder="Phone" ng-model="main.volData.emc.phone">
+    <input name="emergencyPhone" type="tel" placeholder="Phone" ng-model="main.volData.emc.phone">
   </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
@@ -172,10 +172,10 @@
   <h3>- Work and Volunteer Experience -</h3>
   <h4>Work Experience</h4>
   <h5>Please list your work experience below</h5>
-  <textarea class="description" ng-model="main.volData.workExp"></textarea>
+  <textarea required class="description" ng-model="main.volData.workExp"></textarea>
   <h4>Volunteer Experience</h4>
   <h5>Please list your volunteer experience below</h5>
-  <textarea class="description" ng-model="main.volData.volExp"></textarea>
+  <textarea required class="description" ng-model="main.volData.volExp"></textarea>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
@@ -183,11 +183,11 @@
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 5">
   <h3>- More Info -</h3>
   <h5>Why are you interested in volunteering at A Woman's Place?</h5>
-  <textarea class="description" ng-model="main.volData.why"></textarea>
+  <textarea required class="description" ng-model="main.volData.why"></textarea>
   <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
-  <textarea class="description" ng-model="main.volData.like"></textarea>
+  <textarea required class="description" ng-model="main.volData.like"></textarea>
   <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
-  <input type="text" ng-model="main.volData.how">
+  <input required type="text" ng-model="main.volData.how">
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
@@ -196,7 +196,7 @@
   <h3>- Schedule -</h3>
   <div class="inline">
     <h5>Desired length of commitment (ex. 6 months, 1 year, ongoing, etc.)</h5>
-    <input type="text" ng-model="main.volData.length">
+    <input required type="text" ng-model="main.volData.length">
   </div>
   <div class="inline">
     <h5>Desired time commitment per week:</h5>

@@ -15,6 +15,12 @@
     <script src="/js/module.awp.js"></script>
     <script src="/js/controller.main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("user_CuBG80OqHk7NqNoCVRLmk");
+        })();
+    </script>
   </head>
   <body ng-controller="mainController as main">
     <div class="escape">
@@ -24,7 +30,7 @@
       </button> </a>
     </div>
                               <!-- TOP BAR -->
-    <div class="top-bar"><span class="contact">Business: 970-351-0476 &nbsp;|&nbsp; Email: info@awpdv.org</span>
+    <div class="top-bar">
       <a href="mailto:info@awpdv.org" class="social-link"><span class="glyphicon glyphicon-envelope"></span></a>
       <a href="https://www.facebook.com/AWPWeld/" class="social-link"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
       <a href="https://twitter.com/AWPWeld" class="social-link"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
@@ -35,6 +41,7 @@
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fdcd68af7757e7396fa645fa1_eb867566ad" tabindex="-1" value=""></div>
           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="padding: 3px; position: relative: bottom: 1px;">
         </div>
+        <a href="#/giveHelp#give" class="social-link"><button type="button" name="donate" class='btn btn-success'>donate</button></a>
         <div id="mce-responses" class="clear">
           <div class="response" id="mce-error-response" style="display:none"></div>
           <div class="response" id="mce-success-response" style="display:none"></div>
@@ -42,6 +49,8 @@
       </form>
     </div>
                               <!-- END TOP BAR -->
+
+                              <!-- START NAVBAR -->
     <div class="logo">
       <img src="resources/awp.png" alt="A woman's place banner" class="banner">
       <div class="crisis-div inline">
@@ -57,6 +66,7 @@
         <a href="#/getHelp" class="small-nav-link" ng-click="main.getHelpData()"><div>Get Help</div></a>
         <a href="#/dv" class="small-nav-link" ng-click="main.dvData()"><div>Learn More</div></a>
         <a href="#/giveHelp" class="small-nav-link"><div>Get Involved</div></a>
+        <a href="#/resources" class="small-nav-link"><div>Resources</div></a>
       </div>
       <ul class="nav-list">
         <a class="nav-link myFont" href="#/" ng-click="main.activeNav = 1" ng-class="{'nav-active': main.activeNav === 1}"><li>Home</li>
@@ -64,14 +74,18 @@
         </a><a class="nav-link myFont" href="#/getHelp" ng-click="main.activeNav = 3; main.getHelpData();"  ng-class="{'nav-active': main.activeNav === 3}"><li>Get Help</li>
         </a><a class="nav-link myFont" href="#/dv" ng-click="main.activeNav = 4; main.dvData()"  ng-class="{'nav-active': main.activeNav === 4}"><li>Learn More</li>
         </a><a class="nav-link myFont" href="#/giveHelp" ng-click="main.activeNav = 5"  ng-class="{'nav-active': main.activeNav === 5}"><li>Get Involved</li>
-        </a>
+        </a><a class="nav-link myFont"
+            href="#/resources"
+            ng-click="main.activeNav = 6"
+            ng-class="{'nav-active': main.activeNav === 6}">
+            <li>Resources</li></a>
       </ul>
     </nav>
+                        <!-- END NAVBAR  -->
 
-    <ng-view>
+    <ng-view></ng-view>
 
-    </ng-view>
-
+<div class="centerInfo">
     <div class="section myFont" style="padding: 10px 10%">
       <h4>If you are experiencing or know someone that is experiencing
 domestic violence, call:</h4>
@@ -79,11 +93,15 @@ domestic violence, call:</h4>
         Toll Free: 866-356-4226<br>
         Business: 970-351-0476<br>
         Email: info@awpdv.org</h5>
-    </div><div class="section">
+    </div>
+  </div>
+
+    <div class="section">
       <img src="resources/handi.png" alt="" class="foot-img">
       <img src="resources/united-way.jpg" alt="" class="foot-img">
       <img src="resources/sehabla.gif" alt="" class="foot-img">
     </div>
+
 
     <footer class="well">
       A Woman's Place does not discriminate against any person because of race, color, national or

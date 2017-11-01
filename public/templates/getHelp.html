@@ -10,11 +10,11 @@
 
 <div class="section section-get-help blue text-white">
   <h2 class="font">{{ main.awp.creating_a_safety_plan[0].heading}}</h2>
-  <div id="safety-plan" class="myFont text-left"></div>
+  <div ng-bind-html="main.safetyPlan" class="myFont text-left"></div>
 </div>
 <div class="section section-get-help orange">
   <h2 class="font">{{ main.awp.preparing_to_leave[0].heading }}</h2>
-  <div id="prep-to-leave" class="myFont text-left"></div>
+  <div ng-bind-html="main.prepToLeave" class="myFont text-left"></div>
 
 </div>
 <h2 class="text-purple font">Services</h2>
@@ -38,13 +38,15 @@
 </div>
 
 <div class="section section-get-help blue text-white">
-    <h2 class="font">{{ main.awp.protecting_online_privacy[0].heading}}</h2>
-    <div id="online-privacy" class="myFont text-left"></div>
     <div id="cyberstalking"></div>
+    <h2 class="font">{{ main.awp.protecting_online_privacy[0].heading}}</h2>
+    <!-- <div id="online-privacy" class="myFont text-left"></div> -->
+    <div ng-bind-html="main.onlinePrivacy" class="myFont text-left"></div>
+
 </div>
 
 
 <div class="section section-get-help orange">
   <h2 class="font">{{ main.awp.community_resources[0].heading }}</h2>
-  <div id="community-res" class="myFont text-left"></div>
+  <div ng-bind-html="main.communityResources" class="myFont text-left"></div>
 </div>

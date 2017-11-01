@@ -12,6 +12,17 @@
   <div id="what-is-dv" class="myFont text-left"></div>
 </div>
 
+<div class="section section-get-help orange">
+  <h2 class="font"> Dynamics of Abuse</h2>
+  <!-- <div ng-repeat=""> -->
+    <h4 class="font text-left"></h4>
+    <div class="myFont text-left">Brownie gingerbread candy. Pie oat cake wafer oat cake marzipan tootsie roll chocolate bar apple pie biscuit. Carrot cake toffee ice cream carrot cake brownie jelly-o tootsie roll gingerbread sweet roll. Carrot cake muffin pie sesame snaps dessert lemon drops wafer cake. Caramels carrot cake tiramisu cookie bear claw wafer. Cupcake brownie chocolate cake liquorice. Gummi bears wafer pastry candy.
+Jelly beans caramels apple pie lollipop cheesecake dragée danish candy. Dessert carrot cake chocolate cake gingerbread candy canes. Cake icing gummi bears halvah.
+Cake gummies wafer gingerbread. Cake tootsie roll dragée dessert carrot cake lemon drops carrot cake. Biscuit wafer cake pie halvah muffin tart.
+Dragée jelly fruitcake cookie cotton candy. Tiramisu oat cake cotton candy tootsie roll tart bear claw. Oat cake candy canes lemon drops chocolate cake. Pudding bear claw pastry halvah tootsie roll carrot cake.</div>
+  <!-- </div> -->
+</div>
+
 <div class="blue text-white section section-get-help">
   <h2 class="font"> {{ main.awp.warning_signs[0].heading }}</h2>
   <div id="warning-signs" class="myFont text-left"></div>
@@ -24,6 +35,15 @@
     <div class="myFont text-left"> {{ obstacle.description }}</div>
   </div>
 </div>
+
+<div class="blue text-white section section-get-help">
+  <h2 class="font">Affects on Youth</h2>
+  <div ng-repeat="affects_children in main.awp.affects_children">
+    <h4 class="font text-left"> {{ affects_children.heading }}</h4>
+    <div class="myFont text-left"> {{ affects_children.description }}</div>
+  </div>
+</div>
+
 
 <!-- <h4 class="myFont text-purple">Any act that one person uses to dominate another person in an intimate relationship. For example:</h4>
 

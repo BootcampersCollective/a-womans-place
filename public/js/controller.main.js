@@ -1,10 +1,12 @@
 angular.module('awp')
   .controller('mainController', mainController);
 
-mainController.$inject = ['$http', '$location'];
 
-function mainController($http, $location) {
+mainController.$inject = ['$http', '$location', '$sce'];
+
+function mainController($http, $location, $sce) {
   var main = this;
+  main.$sce = $sce;
 
   // Figures out which page user is on when they enter the site and selects the
   // correct navigation link
@@ -23,11 +25,14 @@ function mainController($http, $location) {
       main.activeNav = 4;
       break;
     case '#/giveHelp':
+      main.activeNav = 5;
+      break;
+    case '#/resources':
+      // main.activeNav = 6;
+      // break;
     case '#/volunteer':
     case '#/volunteerApp':
     case '#/wishlist':
-      main.activeNav = 5;
-      break;
     default:
       main.activeNav = 1;
   }
@@ -42,9 +47,18 @@ function mainController($http, $location) {
 
 
       // Main object of CMS response
-      main.awp = res.data.data;
-            // console.log(main.awp);
-            console.log(main.awp.obstacles);
+  main.awp = res.data.data;
+    // console.log(main.awp);
+
+    // the butter-cms response sends sends many description values as HTML text.
+    // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats all in it as HTML.
+    // This is how (one way?) to make the HTML in those discriptions acceptable to display correctly in angularJS.
+    // They have to be set as safe...
+  main.communityResources = $sce.trustAsHtml(main.awp.community_resources[0].description);
+  main.prepToLeave        = $sce.trustAsHtml(main.awp.preparing_to_leave[0].description);
+  main.safetyPlan         = $sce.trustAsHtml(main.awp.creating_a_safety_plan[0].description);
+  main.onlinePrivacy      = $sce.trustAsHtml(main.awp.protecting_online_privacy[0].description);
+      // console.log(main.awp.obstacles);
 
       /////////////////////// HOME PAGE DATA //////////////////////////////////
       // Data used in bootstrap carousel
@@ -60,23 +74,14 @@ function mainController($http, $location) {
       // we need to split it evenly into two different arrays
       main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
-      
-      //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
-      main.getHelpData = function(){
-        setTimeout(function(){
-          var prepToLeave = $('#prep-to-leave');
-          var safetyPlan = $('#safety-plan');
-          var onlinePrivacy = $('#online-privacy');
-          // var communityRes = $('#community-res');
 
-          // console.log("GET HELP: ", prepToLeave, safetyPlan, onlinePrivacy);
 
-          prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-          safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-          onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-        }, 1000);
-      }
+      /////////////////////// RESOURCES PAGE DATA //////////////////////////////
+
+
+      main.resources = res.data.data.resources;
+
+
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
         main.getHelpData();
@@ -149,51 +154,6 @@ function mainController($http, $location) {
   // Blank object to store volunteer information for application
   main.volData = {};
 
-  // Dummy Form Data
-  // main.volData = { "workExp":"Seven years in the Navy",
-  //                   "volExp":"Animal shelter volunteer work",
-  //                   "references":[{
-  //                     "name":"Donald Trump",
-  //                     "relationship":"President",
-  //                     "phone":"555-555-5555"
-  //                     },{
-  //                     "name":"Obama",
-  //                     "relationship":"Former President",
-  //                     "phone":"555-555-2342"
-  //                   }],
-  //                   "length":"Ongoing",
-  //                   "hours":"10",
-  //                   "why":"I want to help a cause I believe in",
-  //                   "like":"The rewarding feeling of helping people",
-  //                   "how":"RefactorU career services",
-  //                   "first":"Sean",
-  //                   "last":"Birdsall",
-  //                   "street":"1216 Marina Ct.",
-  //                   "city":"Lewisivlle",
-  //                   "state":"TX",
-  //                   "zip":75067,
-  //                   "phone":"972-510-9534",
-  //                   "email":"sbirdsall0312@gmail.com",
-  //                   "highestEd":"Some College",
-  //                   "major":"N/A",
-  //                   "languages":['English'],
-  //                   "times":['Afternoons'],
-  //                   "contactMethods":['Phone','Email'],
-  //                   "eduExpected":null,
-  //                   "days":['Saturday','Sunday'],
-  //                   "volTimes":['Mornings','Afternoons'],
-  //                   "crime":"No",
-  //                   "questions":"None",
-  //                   "restrictions":"None",
-  //                   "emc":{
-  //                     "name":"Debbie Birdsall",
-  //                     "relationship":"Mother",
-  //                     "street":"1216 Marina Ct.",
-  //                     "city":"Lewisivlle",
-  //                     "state":"TX","zip":75067,
-  //                     "phone":"214-641-8295"},
-  //                     };
-
   main.formPage = 1;
 
   main.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -204,11 +164,7 @@ function mainController($http, $location) {
 
   main.languages = ['English', 'Spanish', 'Other...'];
 
-  main.formStates = ["CO","AL","AK","AZ","AR","CA","CT","DE","DC","FL","GA","HI",
-                     "ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN",
-                     "MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH",
-                     "OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA",
-                     "WV","WI","WY"];
+  main.formStates = ["CO","AL","AK","AZ","AR","CA","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"];
 
   main.nextBtn = function(){
         main.formPage++;
@@ -218,5 +174,13 @@ function mainController($http, $location) {
     main.formPage--;
   }
 
-
+  main.submitVolApp = function () {
+      var volunteerData = main.volData
+      console.log(volunteerData)
+      $http.post('/volunteerSubmit', volunteerData)
+           .then (function success(response) {
+           console.log("successful post")
+         })
+         .catch(function(err){console.log("Update via put failed, caught error: ",err)})
+        }
 }

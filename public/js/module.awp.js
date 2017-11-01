@@ -36,6 +36,9 @@ function myRouter($routeProvider){
     .when('/wishlist', {
       templateUrl: '../templates/wishlist.html'
     })
+    .when('/resources', {
+      templateUrl: '../templates/resources.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
